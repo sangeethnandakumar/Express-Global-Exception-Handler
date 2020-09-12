@@ -1,19 +1,28 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 
 namespace ExpressGlobalExceptionHandler
 {
-    public class Response<T, V>
+    public interface IResponse
+    {
+
+    }
+
+    public class Response<T> : IResponse
     {
         public bool IsSuccess { get; set; }
         public ResponseStatus ResponseStatus { get; set; }
-        public List<string> Attributes { get; set; }
+        public IEnumerable<string> Info { get; set; }
         public string Message { get; set; }
         public T Data { get; set; }
 
         public Response()
         {
-            Attributes = new List<string>();
+            Info = new List<string>();
+            ResponseStatus = ResponseStatus.SUCCESS;
+            Message = "The request was successfull";
+            IsSuccess = true;
         }
 
         public override string ToString()
@@ -22,29 +31,43 @@ namespace ExpressGlobalExceptionHandler
         }
     }
 
-    public class Response
+    public class Response : IResponse
     {
         public bool IsSuccess { get; set; }
         public ResponseStatus ResponseStatus { get; set; }
-        public List<string> Attributes { get; set; }
+        public IEnumerable<string> Info { get; set; }
         public string Message { get; set; }
 
         public Response()
         {
-            Attributes = new List<string>();
+            Info = new List<string>();
+            ResponseStatus = ResponseStatus.SUCCESS;
+            Message = "The request was successfull";
+            IsSuccess = true;
         }
 
         public override string ToString()
         {
-            return JsonConvert.SerializeObject(this);
+            return JsonConvert.SerializeObject(this, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+        }
+
+        public static Response ErrorResponse(List<string> errors)
+        {
+            return new Response
+            {
+                IsSuccess = false,
+                Message = "Request validation failed. Please correct your request parameters",
+                ResponseStatus = ResponseStatus.WARNING,
+                Info = errors
+            };
         }
     }
 
     public enum ResponseStatus
     {
-        SUCCESS,
-        INFO,
-        WARNING,
-        ERROR
-    }
+        SUCCESS = 1,
+        WARNING = 2,
+        ERROR= 3,
+        EXCEPTION= 4
+    }    
 }

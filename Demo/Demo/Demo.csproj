@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ExpressGlobalExceptionHandler\ExpressGlobalExceptionHandler.csproj" />
   </ItemGroup>
+
 
 </Project>

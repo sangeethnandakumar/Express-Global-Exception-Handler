@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{7306B34C-5C44-4DBF-98AA-F3E50F6A5B84}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressGlobalExceptionHandler", "ExpressGlobalExceptionHandler\ExpressGlobalExceptionHandler.csproj", "{7C0AD558-97EB-44A6-AF81-CBEE0E3C823F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{23BF3820-1B04-48A8-BD10-A302E7C3D5FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7306B34C-5C44-4DBF-98AA-F3E50F6A5B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7306B34C-5C44-4DBF-98AA-F3E50F6A5B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7306B34C-5C44-4DBF-98AA-F3E50F6A5B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7306B34C-5C44-4DBF-98AA-F3E50F6A5B84}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7C0AD558-97EB-44A6-AF81-CBEE0E3C823F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7C0AD558-97EB-44A6-AF81-CBEE0E3C823F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C0AD558-97EB-44A6-AF81-CBEE0E3C823F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C0AD558-97EB-44A6-AF81-CBEE0E3C823F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23BF3820-1B04-48A8-BD10-A302E7C3D5FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23BF3820-1B04-48A8-BD10-A302E7C3D5FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23BF3820-1B04-48A8-BD10-A302E7C3D5FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23BF3820-1B04-48A8-BD10-A302E7C3D5FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

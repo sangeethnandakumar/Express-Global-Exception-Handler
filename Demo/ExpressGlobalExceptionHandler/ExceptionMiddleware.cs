@@ -1,8 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ExpressGlobalExceptionHandler
@@ -37,7 +34,7 @@ namespace ExpressGlobalExceptionHandler
             {
                 IsSuccess = false,
                 Message = "Error processing the request",
-                ResponseStatus = ResponseStatus.ERROR
+                ResponseStatus = ResponseStatus.EXCEPTION
             }.ToString());
         }        
     }
