@@ -29,20 +29,18 @@ namespace Demo.Controllers
         [HttpPost]
         public IActionResult Get(BindModel data)
         {
-            throw new Exception();
-            var result = new List<string> { "Data A", "Data B" };
             //Validate request
             if (WeatherForecastValidator.ValidateGet(data).IsSuccess)
             {
                 return Ok(new Response<List<string>>
                 {
-                    Data = result
+                    Data = new List<string> { "Data A", "Data B" }
                 });
             }
             else
             {
                 return BadRequest(WeatherForecastValidator.ValidateGet(data));
-            }            
+            }
         }
     }
 }

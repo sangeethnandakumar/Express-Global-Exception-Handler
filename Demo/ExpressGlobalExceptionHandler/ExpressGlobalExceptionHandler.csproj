@@ -2,12 +2,29 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>Twileloop.ExpressGlobalExceptionHandler</PackageId>
+    <Authors>Sangeeth Nandakumar</Authors>
+    <Company>Twileloop</Company>
+    <Description>Express Global exception handler integrates seamlessly into your .NET Core API project and provides error response in http response. It includes and uses a standard API response schema that your application can use on any endpoint.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/sangeethnandakumar/Express-Global-Exception-Handler</PackageProjectUrl>
+    <PackageIcon>exception.png</PackageIcon>
+    <RepositoryUrl>https://github.com/sangeethnandakumar/Express-Global-Exception-Handler</RepositoryUrl>
+    <RepositoryType>Open Source</RepositoryType>
+    <PackageTags>ASP.Net Core, Global, Exception, Handler, API, Response</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\exception.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
